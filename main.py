@@ -61,9 +61,9 @@ def race_turtles():
 
 def display_result(winner, player_1_bet, player_2_bet, chore):
     if winner == player_1_bet and winner != player_2_bet:
-        message = f"{player_1_name} wins! 😂 {player_1_name} has to {chore}..."
+        message = f"{player_1_name} wins! 😂 {player_2_name} has to {chore}..."
     elif winner == player_2_bet and winner != player_1_bet:
-        message = f"{player_2_name} wins! 😂 {player_2_name} has to {chore}..."
+        message = f"{player_2_name} wins! 😂 {player_1_name} has to {chore}..."
     elif winner != player_1_bet and winner != player_2_bet:
         message = f"You both lose. 😖 You both have to {chore}..."
     else:
