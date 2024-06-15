@@ -16,8 +16,10 @@ message_turtle.goto(-230, -140)
 
 screen.setup(width=500, height=400)
 
-player_1_name = "Elle"
-player_2_name = "Sarah"
+player_1_name = screen.textinput(title="What is your name?",
+                                prompt="What is your name, player 1?")
+player_2_name = screen.textinput(title="What is your name?",
+                                prompt="What is your name, player 2?")
 player_1_bet = screen.textinput(title=f"{player_1_name} - Place your bet",
                                 prompt="Which turtle will win the race? Enter a color: (red, green, blue)")
 player_2_bet = screen.textinput(title=f"{player_2_name} - Place your bet",
@@ -59,9 +61,9 @@ def race_turtles():
 
 def display_result(winner, player_1_bet, player_2_bet, chore):
     if winner == player_1_bet and winner != player_2_bet:
-        message = f"Elle wins! 😂 Sarah has to {chore}..."
+        message = f"{player_1_name} wins! 😂 {player_1_name} has to {chore}..."
     elif winner == player_2_bet and winner != player_1_bet:
-        message = f"Sarah wins! 😂 Elle has to {chore}..."
+        message = f"{player_2_name} wins! 😂 {player_2_name} has to {chore}..."
     elif winner != player_1_bet and winner != player_2_bet:
         message = f"You both lose. 😖 You both have to {chore}..."
     else:
